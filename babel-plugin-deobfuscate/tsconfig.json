@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Syntax is currently limited by react-scripts in dependent package. Runtime compatibility is a non-goal!
+    "lib": [
+      "es2015"
+    ],
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": false,
+    "pretty": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "outDir": "./lib"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

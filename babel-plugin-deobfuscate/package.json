@@ -1,0 +1,47 @@
+{
+  "name": "babel-plugin-deobfuscate",
+  "version": "0.0.2",
+  "description": "Reverse code obfuscation for analysis.",
+  "main": "lib/index.js",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json -c tslint.json --type-check",
+    "posttest": "npm run lint",
+    "build": "tsc"
+  },
+  "keywords": [
+    "babel-plugin",
+    "obfuscation",
+    "deobfuscation"
+  ],
+  "author": "Lucas Neiva",
+  "devDependencies": {
+    "@types/babel-types": "^6.7.16",
+    "@types/chalk": "^0.4.31",
+    "@types/jest": "^19.2.3",
+    "@types/node": "^7.0.18",
+    "babel-core": "^6.24.0",
+    "jest": "^20.0.0",
+    "prettier": "^1.3.1",
+    "ts-jest": "^20.0.3",
+    "tslint": "^5.2.0",
+    "tslint-config-standard": "^5.0.2",
+    "typescript": "^2.3.2"
+  },
+  "peerDependencies": {
+    "babel-core": "6.*"
+  },
+  "jest": {
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "mapCoverage": true,
+    "testRegex": "/test/.*\\.test\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  }
+}
