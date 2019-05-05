@@ -6,6 +6,17 @@ You can have a try online at www.illuminatejs.com
 # Getting Started
 Please refer to the `babel-plugin-deobfuscate/README.md` file to start contributing or to get some hints on how to integrate the deobfuscator into your own product/application. Pull requests are very welcome.
 
+You can use the deobfuscator straight away with the **babel-cli** node module (`npm install @babel/core @babel/cli`).
+From the root project execute `babel.js` specifying the `plugins` parameter with the `babel-plugin-deobfuscate` path and the desired file to deobfuscate. For example:
+```
+$ cat test.js 
+var x=1;
+console.log(x+1);      
+
+$ ./node_modules/@babel/cli/bin/babel.js --plugins "./babel-plugin-deobfuscate"  test.js
+const x = 1;
+console.log(2);
+```
 # Key Features
 
 ## Constant Propagation
