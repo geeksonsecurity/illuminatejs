@@ -1,6 +1,6 @@
 import * as babel from 'babel-core'
 import * as prettier from 'prettier'
-import deobfuscatePlugin from '../src/index'
+import deobfuscatePlugin from '../src/illuminatejs'
 
 const generatorOpts = { compact: false }
 
