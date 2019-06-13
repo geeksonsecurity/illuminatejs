@@ -55,6 +55,7 @@ With the exception of variables declared with the `const` keyword, all variables
 | Member assignment | `a[0] = 1`| 
 
 Constant propagation fails when variables or member are re-assigned. Any of the following conditions may render static evaluation impossible.
+
 | Description | Example | Consequence |
 |-|-|-|
 Assignment of unknown member `x` | `a[x] = b`	| All members of `a` must be assumed unknown.
