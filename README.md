@@ -1,7 +1,7 @@
 # Intro
 > IlluminateJs is a static javascript deobfuscator aimed to help analyst understand obfuscated and potentially malicious JavaScript Code. Consider it like JSDetox (the static part), but on steroids. 
 
-You can have a try online at www.illuminatejs.com
+You can have a try online at the archived version https://web.archive.org/web/20180701092040/https://illuminatejs.com/#/
 
 # Getting Started
 Please refer to the `babel-plugin-deobfuscate/README.md` file to start contributing or to get some hints on how to integrate the deobfuscator into your own product/application. Pull requests are very welcome.
