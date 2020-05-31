@@ -9,7 +9,7 @@ export function deobfuscate (code) {
 }
 
 function format (code) {
-  return prettier.format(code)
+  return prettier.format(code, { parser: "babel"})
     .split('\n')
     .filter(line => line !== '')
     .join('\n')
