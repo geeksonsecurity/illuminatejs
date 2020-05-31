@@ -1,0 +1,17 @@
+{
+  "name": "illuminatejs-cli",
+  "version": "1.0.0",
+  "description": "Simple CLI tool for IlluminateJS deobfuscator",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GeeksOnSecurity",
+  "license": "ISC",
+  "dependencies": {
+    "babel-standalone": "^6.26.0"
+  },
+  "bin": {
+    "illuminatejs": "./cli.js"
+  }
+}

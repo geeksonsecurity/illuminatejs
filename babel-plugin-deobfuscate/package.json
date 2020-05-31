@@ -2,7 +2,7 @@
   "name": "babel-plugin-deobfuscate",
   "version": "0.0.2",
   "description": "Reverse code obfuscation for analysis.",
-  "main": "lib/index.js",
+  "main": "lib/illuminatejs.js",
   "private": true,
   "scripts": {
     "test": "jest",
@@ -15,7 +15,7 @@
     "obfuscation",
     "deobfuscation"
   ],
-  "author": "Lucas Neiva",
+  "author": "GeeksOnSecurity",
   "devDependencies": {
     "@types/babel-types": "^6.7.16",
     "@types/chalk": "^0.4.31",
@@ -27,8 +27,7 @@
     "ts-jest": "^20.0.3",
     "tslint": "^5.2.0",
     "tslint-config-standard": "^5.0.2",
-    "typescript": "^2.3.2",
-    "webpack-cli": "^3.3.11"
+    "typescript": "^2.3.2"
   },
   "peerDependencies": {
     "babel-core": "6.*"
@@ -48,6 +47,6 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "webpack": "^4.43.0"
+    "babel-standalone": "^6.26.0"
   }
 }
