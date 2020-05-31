@@ -9,14 +9,18 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     
-    steps:
+    steps:    
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
     - name: Install yarn
       run: npm install yarn
     - name: Switch to plugin folder
       run: cd babel-plugin-deobfuscate
     - name: Install dependencies
-      run: yarn install
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      run: yarn install --dev
     - name: Jest Code Coverage Report
       uses: ziishaned/jest-reporter-action@0.1.1
       with:
