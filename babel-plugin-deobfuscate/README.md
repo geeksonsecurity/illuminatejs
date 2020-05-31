@@ -28,7 +28,7 @@ Sources are found in `src/`; tests in `test/`. The test are a good demonstration
 
 ## CLI
 
-The package contains a small CLI utility that can be used to deobfuscate javascript file right-away. The alias `illuminatejs` should be registered by NPM, otherwise you can call the `./cli.js` node script manually.
+The package contains a small CLI utility that can be used to deobfuscate javascript file right-away. The alias `illuminatejs` can be registered with `npm link`, otherwise you can use the `./cli.js` node script manually.
 
 ```
 $ cat test.js 
