@@ -1,6 +1,6 @@
 {
   "name": "@geeksonsecurity/illuminatejs",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Babel plugin to deobfuscate javascript code.",
   "main": "lib/illuminatejs.js",
   "scripts": {
@@ -48,7 +48,8 @@
   },
   "dependencies": {
     "babel-standalone": "^6.26.0",
-    "babel-types": "^6.26.0"
+    "babel-types": "^6.26.0",
+    "babylon": "^6.18.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
