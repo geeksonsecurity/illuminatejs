@@ -13,7 +13,7 @@ $ cat test.js
 var x=1;
 console.log(x+1);      
 
-$ ./node_modules/@babel/cli/bin/babel.js --plugins "./babel-plugin-deobfuscate/lib/illuminatejs.js"  test.js
+$ ./node_modules/babel-cli/bin/babel.js --plugins ./lib/illuminatejs.js  test.js
 const x = 1;
 console.log(2);
 ```

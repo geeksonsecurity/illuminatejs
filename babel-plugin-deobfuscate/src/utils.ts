@@ -19,7 +19,7 @@ export function hasValue (node: t.Node): node is HasValue {
 
   if (t.isArrayExpression(node)) {
     if (node.elements.every(e => t.isExpression(e) && hasValue(e))) {
-      node['value'] = node.elements.map((e) => e['value'])
+      node['value'] = node.elements.map((e) => e!['value'])
       return true
     }
   }
