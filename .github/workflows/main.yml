@@ -25,4 +25,4 @@ jobs:
       uses: ziishaned/jest-reporter-action@0.1.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        working-directory: ${{ env.working-directory}}
+        test-command: "cd ${{ env.working-directory}} ; yarn jest --coverage"
