@@ -21,6 +21,8 @@ jobs:
       working-directory: ${{ env.working-directory}} 
     - name: Jest Annotations & Coverage
       uses: mattallty/jest-github-action@v1.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # The test command to run
         test-command: "cd ${{ env.working-directory}} ; yarn jest --coverage"
