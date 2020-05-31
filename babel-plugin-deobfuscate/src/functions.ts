@@ -53,7 +53,7 @@ export function evaluate (path, paramBindings): t.Expression | null {
       .get('argument')
     const resultNode = evaluateExpression(resultPath)
     if (resultNode) {
-      if (u.hasValue(resultNode) || (t.isIdentifier(resultNode) && !functionScope.getOwnBinding(resultNode.name))) {
+      if (u.hasValue(resultNode)) {
         result = resultNode
       }
     }

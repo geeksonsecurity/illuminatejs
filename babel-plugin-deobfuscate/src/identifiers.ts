@@ -94,7 +94,7 @@ function getDeclaration (path): t.VariableDeclaration | null {
 }
 
 function hasAssignmentsInChildScope (binding, scope) {
-  binding.constantViolations.some(p => {
+  return binding.constantViolations.some(p => {
     if (!t.isAssignmentExpression(p.node)) {
       return true
     }
@@ -104,5 +104,6 @@ function hasAssignmentsInChildScope (binding, scope) {
       }
       return true
     }
+    return false
   })
 }

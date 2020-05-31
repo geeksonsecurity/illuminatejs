@@ -103,7 +103,7 @@ function hasShadowing (targetScope, indentifiers: t.Identifier[]): boolean {
 function evaluateFunctionCall (path, callee: t.Identifier): t.Expression | null {
   t.assertIdentifier(callee)
 
-  const args = functions.evaluatedArguments(path)
+  const args: any = functions.evaluatedArguments(path)
   if (callee.name === 'eval' && args.length === 1 && u.hasValue(args[0])) {
     return evaluateEvalCall(path, args[0]['value'])
   }

@@ -9,7 +9,7 @@ export function deobfuscate (code) {
 }
 
 function format (code) {
-  return prettier.format(code)
+  return prettier.format(code, { parser: "babel"})
     .split('\n')
     .filter(line => line !== '')
     .join('\n')
@@ -17,13 +17,13 @@ function format (code) {
 
 // jest
 
-import * as diff from 'jest-diff'
+import diffStringsUnified from 'jest-diff'
 import * as chalk from 'chalk'
 
 declare global {
   namespace jest {
-    interface Matchers {
-      deobfuscation: (expected: string) => void
+    interface Matchers<R> {
+      deobfuscation(expected: string): R;
     }
   }
 }
@@ -43,7 +43,7 @@ expect.extend({
     if (pass) {
       return { pass, message: () => '' }
     } else {
-      const difference = diff(expected, result) || [ chalk.green(`- ${expected}`), chalk.red(`+ ${result}`) ].join('\n')
+      const difference = diffStringsUnified(expected, result) || [ chalk.green(`- ${expected}`), chalk.red(`+ ${result}`) ].join('\n')
       const message = () => `Expected de-obfuscation result difference:
 
 ${difference}
