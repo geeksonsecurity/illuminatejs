@@ -1,11 +1,9 @@
 # Intro
 > IlluminateJs is a static javascript deobfuscator aimed to help analyst understand obfuscated and potentially malicious JavaScript Code. Consider it like JSDetox (the static part), but on steroids. 
 
-You can have a try online at the archived version https://web.archive.org/web/20180701092040/https://illuminatejs.com/#/
+# Usage
 
-# Getting Started
-Please refer to the `babel-plugin-deobfuscate/README.md` file to start contributing or to get some hints on how to integrate the deobfuscator into your own product/application. Pull requests are very welcome.
-
+## CLI
 You can use the deobfuscator straight away with the **babel-cli** node module (`npm install @babel/core @babel/cli`).
 From the root project execute `babel.js` specifying the `plugins` parameter with the `babel-plugin-deobfuscate` path and the desired file to deobfuscate. For example:
 ```
@@ -17,6 +15,15 @@ $ ./node_modules/@babel/cli/bin/babel.js --plugins "./babel-plugin-deobfuscate/l
 const x = 1;
 console.log(2);
 ```
+
+## React Webapp
+The `playground` folder contains a simple React app that uses the deobfuscator plugin. Please refer to [playground/README.md](playground/README.md) to get it running.
+
+There is an outdated version still archived at https://web.archive.org/web/20180701092040/https://illuminatejs.com/#/
+
+# Contribute 
+Please refer to the `babel-plugin-deobfuscate/README.md` file to start contributing . Pull requests are very welcome.
+
 # Key Features
 
 ## Constant Propagation

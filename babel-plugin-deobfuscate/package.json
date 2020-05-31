@@ -27,7 +27,8 @@
     "ts-jest": "^20.0.3",
     "tslint": "^5.2.0",
     "tslint-config-standard": "^5.0.2",
-    "typescript": "^2.3.2"
+    "typescript": "^2.3.2",
+    "webpack-cli": "^3.3.11"
   },
   "peerDependencies": {
     "babel-core": "6.*"
@@ -43,5 +44,10 @@
       "js",
       "json"
     ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.43.0"
   }
 }

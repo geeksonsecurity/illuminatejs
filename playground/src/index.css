@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  color: #222;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 14px;
+
+  font-family: system-ui, sans-serif;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+select {
+  font-size: 13px;
+}
+
+button {
+  background-color: #247BA0;
+  color: #E8E6E8;
+  border: 0;
+}
+
+button:hover {
+  filter: saturate(150%);
+}
+
+button:disabled {
+  filter: grayscale();
+}
+
+button.destructive {
+  background-color: #A31621;
+}
+
+.horizontal-spacing > * {
+  margin-right: 15px;
+}
+
+.bg-medium {
+  background-color: #E8E6E8;
+  color: #222;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: yellow;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+.logo {
+  font-variant: small-caps;
+  padding-left: 30px;
+  color: white;
+  font-size: 180%;
+}
+
+.logo .main {
+  text-shadow: 0px 0px 30px yellow;
+}
+
+.hidden { display:none; }
+
+.footer {
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  height: 10px;
+  font-size: 85%;
+}
+
+.container {
+  padding-bottom: 40px;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.sampleLeft {
+  width: 50%;
+  float:left;
+  padding-bottom: 10px;
+}
+
+.sampleRight {
+  width: 50%;
+  float:right;
+  padding-bottom: 10px;
+}
+
+.sampleContainer {
+  clear: both;
+}
