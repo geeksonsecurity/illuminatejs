@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 const Babel = require('babel-standalone');
-const IlluminateJs = require('../babel-plugin-deobfuscate/lib/illuminatejs')
+const IlluminateJs = require('.')
 
 Babel.registerPlugin('illuminatejs', IlluminateJs.default);
 
