@@ -1,3 +1,5 @@
+![CI](https://github.com/geeksonsecurity/illuminatejs/workflows/CI/badge.svg?branch=master)
+
 # Intro
 > IlluminateJs is a static javascript deobfuscator aimed to help analyst understand obfuscated and potentially malicious JavaScript Code. Consider it like JSDetox (the static part), but on steroids. 
 
