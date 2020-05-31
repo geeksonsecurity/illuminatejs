@@ -8,7 +8,8 @@ jobs:
   coverage:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
+    env:
+      working-directory: ./babel-plugin-deobfuscate
     steps:    
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
@@ -17,11 +18,11 @@ jobs:
         node-version: 14.x
     - name: Install yarn
       run: npm install yarn
-    - name: Switch to plugin folder
-      run: cd babel-plugin-deobfuscate
     - name: Install dependencies
       run: yarn install --dev
+      working-directory: ${{ env.working-directory}} 
     - name: Jest Code Coverage Report
       uses: ziishaned/jest-reporter-action@0.1.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: ${{ env.working-directory}}
