@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Install yarn
+      run: npm install -g yarn
+    - name: Switch to plugin folder
+      run: cd babel-plugin-deobfuscate
+    - name: Install dependencies
+      run: yarn install
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Jest Code Coverage Report
       uses: ziishaned/jest-reporter-action@0.1.1
       with:
-        # Github token
         github-token: ${{ secrets.GITHUB_TOKEN }}
