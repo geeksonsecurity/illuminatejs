@@ -20,5 +20,5 @@ jobs:
       run: yarn install --dev
       working-directory: ${{ env.working-directory}} 
     - name: Run jest
-      run: yarn jest --coverage
+      run: yarn jest --coverage --updateSnapshot
       working-directory: ${{ env.working-directory}} 
