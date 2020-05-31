@@ -11,7 +11,7 @@ jobs:
     
     steps:
     - name: Install yarn
-      run: npm install -g yarn
+      run: npm install yarn
     - name: Switch to plugin folder
       run: cd babel-plugin-deobfuscate
     - name: Install dependencies
