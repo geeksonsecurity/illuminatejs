@@ -1,4 +1,4 @@
-# babel-plugin-deobfuscate
+# IlluminateJS Babel Plugin
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 
@@ -6,7 +6,9 @@ Implemented as [Babel](http://babeljs.io) plugin. Written in TypeScript. Babel's
 
 Given that Babel's core functionality involves transforming modern JavaScript, it is incentivised to keep the AST definition and the parser up-to-date with new language syntax.
 
-## Setup
+## Development 
+
+### Setup
 
 First, install [yarn](https://yarnpkg.com/en/docs/install).
 
@@ -19,9 +21,21 @@ yarn build
 
 Sources are found in `src/`; tests in `test/`. The test are a good demonstration of what this project does.
 
-## Terminology
-
-### Function Names
-
+### APIs
 - `evaluate`: evaluate a given **path** or **node** and return an evaluated **node**.
 - `deobfuscate`: evaluate a given **path** and replace it. Returns nothing!
+
+
+## CLI
+
+The package contains a small CLI utility that can be used to deobfuscate javascript file right-away. The alias `illuminatejs` should be registered by NPM, otherwise you can call the `./cli.js` node script manually.
+
+```
+$ cat test.js 
+var x=1;
+console.log(x+1);
+
+$ illuminatejs ./test.js
+const x = 1;
+console.log(2);
+```

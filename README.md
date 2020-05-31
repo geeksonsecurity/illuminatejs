@@ -6,30 +6,8 @@
 # Usage
 
 ## CLI
-Folder `cli/` contains a simple node.js CLI application that uses Babel and the IlluminateJS plugin to deobfuscate the given input file. You can register the `illuminatejs` alias with `npm link` or call the `./cli.js` node script manually.
 
-```
-$ cat test.js 
-var x=1;
-console.log(x+1);
-
-$ illuminatejs ./test.js
-const x = 1;
-console.log(2);
-```
-
-## CLI (using babel-cli module)
-You can use the deobfuscator using the **babel-cli** node module (`npm install @babel/core @babel/cli`).
-From the root project execute `babel.js` specifying the `plugins` parameter with the `babel-plugin-deobfuscate` path and the desired file to deobfuscate. For example:
-```
-$ cat test.js 
-var x=1;
-console.log(x+1);      
-
-$ ./node_modules/@babel/cli/bin/babel.js --plugins "./babel-plugin-deobfuscate/lib/illuminatejs.js"  test.js
-const x = 1;
-console.log(2);
-```
+Refer to plugin [README](babel-plugin-deobfuscate/README.md) for details.
 
 ## React Webapp
 The `playground` folder contains a simple React app that uses the deobfuscator plugin. Please refer to [playground/README.md](playground/README.md) to get it running.
