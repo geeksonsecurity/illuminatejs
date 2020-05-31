@@ -22,7 +22,7 @@ jobs:
       run: yarn install --dev
       working-directory: ${{ env.working-directory}} 
     - name: Jest Code Coverage Report
-      uses: ziishaned/jest-reporter-action@0.1.1
+      uses: ChristiaanScheermeijer/jest-reporter-action@0.1.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         test-command: "cd ${{ env.working-directory}} ; yarn jest --coverage"
